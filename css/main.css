@@ -148,13 +148,13 @@ main .pic-slider {
     transform: translateX(0);
   }
   25%, 50% {
-    transform: translateX(-110%);
+    transform: translateX(-105%);
   }
   60%, 80% {
-    transform: translateX(-210%);
+    transform: translateX(-205%);
   }
   90%, 100% {
-    transform: translateX(-310%);
+    transform: translateX(-305%);
   }
 }
 
