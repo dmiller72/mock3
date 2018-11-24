@@ -1,0 +1,121 @@
+/* line 6, ../sass/main.sass */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 11, ../sass/main.sass */
+body {
+  background-color: #ccc;
+  background: url("../img/footer_lodyas.png");
+}
+
+/* line 14, ../sass/main.sass */
+a {
+  text-decoration: none;
+}
+
+/* line 17, ../sass/main.sass */
+li {
+  list-style: none;
+}
+
+/* line 22, ../sass/main.sass */
+.wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+/* line 29, ../sass/main.sass */
+.contact {
+  padding: 15px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f2f2f2;
+}
+
+/* line 35, ../sass/main.sass */
+.info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 38, ../sass/main.sass */
+.info ul li {
+  margin-right: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #4d4d4d;
+}
+
+/* line 43, ../sass/main.sass */
+.social {
+  color: #aaa;
+}
+
+/* line 46, ../sass/main.sass */
+.social i {
+  padding-left: 20px;
+}
+
+/* line 51, ../sass/main.sass */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 5%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px 0;
+}
+
+/* line 57, ../sass/main.sass */
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 60, ../sass/main.sass */
+nav ul li {
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+/* line 64, ../sass/main.sass */
+nav a {
+  color: black;
+  padding: 15px;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/* line 70, ../sass/main.sass */
+.active, nav a:hover {
+  background-color: #6494e0;
+  color: white;
+}
+
+/* line 75, ../sass/main.sass */
+header button {
+  padding: 15px 20px;
+  color: #f4f5f7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: #6494e0;
+  border: none;
+}
+
+/*# sourceMappingURL=main.css.map */
