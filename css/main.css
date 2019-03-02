@@ -19,7 +19,8 @@ li {
   background-color: white;
   font-family: "Hind Siliguri", sans-serif;
   position: relative; }
-@media(max-width: 850px) {
+
+@media (max-width: 850px) {
   .wrapper {
     width: 100%; } }
 .contact {
@@ -28,24 +29,23 @@ li {
   justify-content: space-between;
   background-color: #f2f2f2;
   flex-wrap: wrap; }
-@media(max-width: 768px) {
+
+@media (max-width: 768px) {
   .contact {
     display: none; } }
 .info ul {
   display: flex; }
-
-.info ul li {
-  margin-right: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  color: #4d4d4d; }
+  .info ul li {
+    margin-right: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #4d4d4d; }
 
 .social a {
   color: #aaa;
   padding-left: 20px; }
-
-.social a:hover {
-  color: grey; }
+  .social a:hover {
+    color: grey; }
 
 header {
   display: flex;
@@ -54,7 +54,10 @@ header {
   align-content: center;
   margin: 15px 0;
   flex-wrap: wrap; }
-@media(max-width: 768px) {
+@media(max-width: 414px) {
+  header {
+    display: block; } }
+@media (max-width: 768px) {
   header {
     flex-direction: column;
     justify-content: center;
@@ -64,33 +67,48 @@ header {
     text-align: center; } }
 .logo {
   font-size: 30px; }
-@media(max-width: 768px) {
+@media(max-width: 414px) {
+  .logo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center; }
+    .logo svg {
+      justify-self: end; } }
+@media (max-width: 414px) {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  span {
+    color: #0f3f8c; } }
+@media (max-width: 768px) {
   .logo {
     text-align: center; } }
-.logo span {
-  color: #0f3f8c; }
-
 svg {
   margin-right: 10px; }
 
+@media (max-width: 415px) {
+  nav {
+    position: absolute;
+    transform: translateX(100%);
+    width: 100%;
+    z-index: 5;
+    top: 7vw; } }
 nav ul {
   display: flex; }
-@media(max-width: 768px) {
-  nav ul {
-    justify-content: space-around; } }
-@media(max-width: 415px) {
-  nav ul {
-    flex-direction: column; } }
-nav ul li {
-  text-transform: uppercase;
-  font-size: 13px; }
-
+  nav ul li {
+    text-transform: uppercase;
+    font-size: 13px; }
 nav a {
   color: black;
   padding: 10px 15px;
   background-color: white;
   transition: all 0.5s; }
 
+@media (max-width: 768px) {
+  nav ul {
+    justify-content: space-around; } }
+@media (max-width: 415px) {
+  nav ul {
+    flex-direction: column; } }
 .active, nav a:hover {
   background-color: #6494e0;
   color: white; }
@@ -108,13 +126,16 @@ header button {
   display: flex;
   align-items: center;
   transition: background-color 250ms;
-  cursor: pointer;
-  @media(max-width: 768px);
-  justify-content: center; }
+  cursor: pointer; }
+@media(max-width: 414px) {
+  header button {
+    width: 100%; } }
+  header button:hover {
+    background-color: #0f3f8c; }
 
-header button:hover {
-  background-color: #0f3f8c; }
-
+@media (max-width: 768px) {
+  header button {
+    justify-content: center; } }
 .clockcolor {
   fill: #f4f5f7; }
 
@@ -124,11 +145,17 @@ main {
   margin: 0 7% 2rem;
   position: relative;
   overflow: hidden; }
+@media(max-width: 846px) {
+  main {
+    margin: 0 15vw 2rem; } }
   main div[class^="slide"] {
     width: 70vw;
     height: 80vmin;
     background-size: cover;
     background-repeat: no-repeat; }
+@media(max-width: 768px) {
+  main div[class^="slide"] {
+    background-position-x: 50%; } }
   main .pic-slider {
     display: flex;
     width: 280vw;
@@ -136,15 +163,9 @@ main {
     position: absolute;
     left: 0;
     animation: move 30s ease-in-out infinite; }
-@keyframes move {
-  0%,15% {
-    transform: translateX(0); }
-  25%,50% {
-    transform: translateX(-70vw); }
-  60%,80% {
-    transform: translateX(-140vw); }
-  90%,100% {
-    transform: translateX(-210vw); } }
+@media(max-width: 768px) {
+  main .pic-slider {
+    animation: none; } }
   main .slide1, main .slide2, main .slide3 {
     width: 100%;
     flex-shrink: 1;
@@ -164,6 +185,9 @@ main {
     letter-spacing: 1px;
     margin-bottom: 1em;
     color: #0f3f8c; }
+@media(max-width: 846px) {
+  main h1 {
+    font-size: 5vmin; } }
     main h1 span {
       font-weight: 400; }
   main p {
@@ -172,7 +196,20 @@ main {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 1rem;
     letter-spacing: -0.1rem; }
-
+@media(max-width: 768px) {
+  main p {
+    line-height: normal;
+    font-size: 5vw;
+    background-color: rgba(255, 255, 255, 0.7); } }
+@keyframes move {
+  0%,15% {
+    transform: translateX(0); }
+  25%,50% {
+    transform: translateX(-70vw); }
+  60%,80% {
+    transform: translateX(-140vw); }
+  90%,100% {
+    transform: translateX(-210vw); } }
 .next::after, .prev::after {
   content: ">";
   position: absolute;
@@ -191,23 +228,28 @@ main {
   opacity: 0.5;
   transition: opacity 0.1s linear; }
 
-.next:hover::after, .prev:hover::after {
+.next:hover::after {
   opacity: 1; }
 
+.prev:hover::after {
+  opacity: 1; }
 .prev::after {
   content: "<";
   left: 75px; }
 
-main h1, main p {
+main h1 {
   max-width: 45%;
   margin-left: 3%;
   text-align: left; }
-
-main p span {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 3rem;
-  line-height: 3rem; }
+main p {
+  max-width: 45%;
+  margin-left: 3%;
+  text-align: left; }
+  main p span {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 3rem; }
 
 .special {
   width: 63vw;
@@ -217,23 +259,19 @@ main p span {
   top: 725px;
   left: 150px;
   flex-wrap: wrap; }
-@media(max-width: 1024px) {
-  .special {
-    display: none; } }
   .special div {
-    min-width: 200px; }
-  .special div:nth-child(1) {
-    background-color: #0f3f8c;
-    flex: 1; }
-  .special div:nth-child(2) {
-    background-color: #3665af;
-    flex: 1; }
-  .special div:nth-child(3) {
-    background-color: #6494e0;
-    flex: 1; }
-  .special div {
+    min-width: 200px;
     padding: 2rem 1.2rem;
     line-height: 1.5rem; }
+    .special div:nth-child(1) {
+      background-color: #0f3f8c;
+      flex: 1; }
+    .special div:nth-child(2) {
+      background-color: #3665af;
+      flex: 1; }
+    .special div:nth-child(3) {
+      background-color: #6494e0;
+      flex: 1; }
   .special h3 {
     font-size: 2rem;
     font-family: "Hind", sans-serif;
@@ -254,6 +292,9 @@ main p span {
     display: flex;
     align-items: center; }
 
+@media (max-width: 1024px) {
+  .special {
+    display: none; } }
 h2, hr {
   margin-left: 5%; }
 
@@ -263,12 +304,12 @@ h2 {
   font-family: "Hind", sans-serif;
   font-size: 2rem;
   letter-spacing: 3px; }
-@media(max-width: 1024px) {
+  h2:last-of-type {
+    margin-top: 6rem; }
+
+@media (max-width: 1024px) {
   h2 {
     margin-top: 10vmin; } }
-h2:last-of-type {
-  margin-top: 6rem; }
-
 hr {
   width: 25%;
   color: #8c8c8c;
@@ -307,9 +348,6 @@ hr {
   font-family: "Hind Siliguri", sans-serif;
   display: flex;
   flex-wrap: wrap; }
-@media(max-width: 414px) {
-  .about {
-    width: 100%; } }
   .about h4 {
     font-size: 1.5rem;
     font-weight: 300;
@@ -346,14 +384,17 @@ hr {
     line-height: 1.5rem;
     margin-bottom: 1rem; }
 
+@media (max-width: 414px) {
+  .about {
+    width: 100%; } }
 .team {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
   .team img {
     width: 70%;
     transition: all 0.3s ease-in-out; }
-  .team img:hover {
-    transform: scale(1.1); }
+    .team img:hover {
+      transform: scale(1.1); }
 
 .team-member {
   text-align: center;
@@ -388,10 +429,6 @@ footer {
     letter-spacing: 1px;
     display: grid;
     grid-template-columns: 25% max-content; }
-@media(max-width: 740px) {
-  .contact-repeat .info1, .contact-repeat .info2, .contact-repeat .info3 {
-    grid-template-columns: 1fr;
-    padding: 0.5rem 1rem; } }
   .contact-repeat .info1 {
     background-color: #0f3f8c; }
   .contact-repeat .info2 {
@@ -410,6 +447,10 @@ footer {
     font-size: 0.9rem;
     align-self: start; }
 
+@media (max-width: 740px) {
+  .contact-repeat .info1, .contact-repeat .info2, .contact-repeat .info3 {
+    grid-template-columns: 1fr;
+    padding: 0.5rem 1rem; } }
 .recap {
   display: flex;
   flex-wrap: wrap; }
@@ -424,8 +465,8 @@ footer {
     margin-right: 5px;
     border: 1px solid #d87b7b;
     background: transparent; }
-  .subscribe input[placeholder] {
-    color: #efcaca; }
+    .subscribe input[placeholder] {
+      color: #efcaca; }
   .subscribe button {
     background-color: #0d3575;
     border: 0;
@@ -457,5 +498,7 @@ footer {
   font-size: 1rem;
   line-height: 2rem;
   letter-spacing: 1px; }
+
+/*# sourceMappingURL=main.css.map */
 
 /*# sourceMappingURL=main.css.map */

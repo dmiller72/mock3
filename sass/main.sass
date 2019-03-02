@@ -5,497 +5,525 @@
 //Location SVg created by FOcus of The Noun Project
 // global decalrations
 
-* 
-    padding: 0
-    margin: 0
-    box-sizing: border-box
-    
-body 
-    background-color: grey
-    background: url('../img/footer_lodyas.png')
-    
-a 
-    text-decoration: none
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
 
-li 
-    list-style: none
-  
+body
+  background-color: grey
+  background: url("../img/footer_lodyas.png")
+
+a
+  text-decoration: none
+
+li
+  list-style: none
+
 .wrapper
-    max-width: 80%
-    margin: 0 auto
-    background-color: white
-    font-family: $font  
-    position: relative
+  width: 80%
+  margin: 0 auto
+  background-color: white
+  font-family: "Hind Siliguri", sans-serif
+  position: relative
 
-// Top Section 
+@media (max-width: 850px)
+  .wrapper
+    width: 100%
 
 .contact
-    padding: 15px 100px
-    display: flex
-    justify-content: space-between
-    background-color: lighten(#ccc,15%)
-    +flex
+  padding: 15px 100px
+  display: flex
+  justify-content: space-between
+  background-color: #f2f2f2
+  flex-wrap: wrap
 
-.info ul 
-    display: flex
+@media (max-width: 768px)
+  .contact
+    display: none
 
-.info ul li
+.info ul
+  display: flex
+  li
     margin-right: 30px
-    +headtext
-    color: darken(#ccc,50%)
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 12px
+    color: #4d4d4d
 
-.social a 
-    color: #aaa 
-    padding-left: 20px
-
-.social a:hover 
-    color: grey 
-
-    // Header
+.social a
+  color: #aaa
+  padding-left: 20px
+  &:hover
+    color: grey
 
 header
-    display: flex
-    padding: $padding
-    justify-content: space-between 
-    align-content: center
-    margin: 15px 0
-    +flex 
-   
-.logo 
-    font-size: 30px
+  display: flex
+  padding: 0 5%
+  justify-content: space-between
+  align-content: center
+  margin: 15px 0
+  flex-wrap: wrap
+  @media(max-width: 414px)
+    display: block
 
-.logo span   
-    color: $blue3
+
+@media (max-width: 768px)
+  header
+    flex-direction: column
+    justify-content: center
+    padding: 0
+    margin: 0
+    align-content: stretch
+    text-align: center
+
+.logo
+  font-size: 30px
+  @media(max-width: 414px)
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    align-items: center
+    svg 
+        justify-self: end
+
+@media (max-width: 414px)  
+  display: grid
+  grid-template-columns: 1fr 1fr auto 
+  span
+    color: #0f3f8c
+
+@media (max-width: 768px)
+  .logo
+    text-align: center
 
 svg
-    margin-right: 10px
+  margin-right: 10px
 
-nav ul 
-    display: flex
- 
-nav ul li
-    text-transform: uppercase
-    font-size: 13px
-
-nav a
-    color: black
-    padding: 10px 15px  
-    background-color: white 
-    transition: all .5s 
-
-.active, nav a:hover 
-    background-color: $blue1
-    color: white 
-    
-header button
-    +button
-    background-color: $blue1
-    border: none
-    display: flex
-    align-items: center
-    transition: background-color 250ms
-    cursor: pointer
-
-header button:hover
-    background-color: $blue3
- 
-.clockcolor 
-    fill: $offwhite   
-
-
-// MAIN 
-
-main 
-    max-width: 1415px 
-    height: 700px 
-    margin: 0 7% 2rem   
-    position: relative
-    overflow: hidden         
-  
-  
-    div[class^="slide"]
-        max-width: 1415px        
-        height: 700px    
-        background-size: cover
-        background-repeat: no-repeat 
-
-    .pic-slider
-        display: flex  
-        max-width: 4245px 
-        height: 700px         
-        position: absolute
-        left: 0
-        transform: 
-        animation: move 30s ease-in-out infinite  
-
-        @keyframes move 
-            0%,15%
-                transform: translateX(0)
-            25%,50% 
-                transform: translateX(-93%)
-            60%,80%
-                transform: translateX(-185%) 
-            90%,100%
-                transform: translateX(-277.3%)                        
-
-    .slide1, .slide2, .slide3
-        width: 100%   
-        flex-shrink: 0  
-        padding-top: 10%     
-   
-    .slide1 
-        background-image: url('http://i.huffpost.com/gen/997993/thumbs/o-DOCTOR-WHITE-COAT-facebook.jpg')  
- 
-    .slide2
-        background-image: url('http://www.ebony.com/wp-content/uploads/2016/07/health_new_black_1280x800_original_322.jpg')
-        p 
-            margin-top: 4rem           
-
-    .slide3
-        background-image: url('http://defendernetwork.com/wp-content/uploads/2017/07/Plano-de-Saude-Ambulatorial.jpg')   
-
-        h1 
-            color: $blue1    
-
-    h1 
-        font-size: 5rem     
-        letter-spacing: 1px     
-        margin-bottom: 1em
-        color: $blue3
-
-        span 
-            font-weight: 400  
-    p  
-        font-size: 30px
-        line-height: 40px 
-        background-color: rgba(255,255,255,.2)   
-        padding: 1rem
-  
-    
-.next::after, .prev::after 
-    content: '>'
+nav
+  @media (max-width: 415px)
     position: absolute
-    top: 75%
-    right: 1050px   
-    font-size: 80px
-    font-weight: 100 
-    width: 1em
-    height: 3em
-    font-family: $font  
-    transform: translateY(-50%)        
-    line-height: 3em 
-    box-sizing: border-box
-    padding: 0 0.2em
-    cursor: pointer
-    opacity: 0.5
-    transition: opacity 0.1s linear
+    transform: translateX(100%)
+    width: 100%
+    z-index: 5
+    top: 7vw
+  ul
+    display: flex
+    li
+      text-transform: uppercase
+      font-size: 13px
+  a
+    color: black
+    padding: 10px 15px
+    background-color: white
+    transition: all 0.5s
+       
+@media (max-width: 768px)
+  nav ul
+    justify-content: space-around
 
-.next:hover::after, .prev:hover::after  
-    opacity: 1
-
-
-.prev::after 
-    content: '<' 
-    left: 75px      
-   
+@media (max-width: 415px)
+  nav ul
+    flex-direction: column
     
+.active, nav a:hover
+  background-color: #6494e0
+  color: white
 
-   
- 
-main h1, main p 
-    max-width: 40%     
-    margin-left: 3%   
+header button
+  padding: 10px 15px
+  color: #f4f5f7
+  font-size: 12px
+  font-weight: 600
+  letter-spacing: 1px
+  font-family: Arial, Helvetica, sans-serif
+  cursor: pointer
+  background-color: #6494e0
+  border: none
+  display: flex
+  align-items: center
+  transition: background-color 250ms
+  cursor: pointer
+  @media(max-width: 414px)
+      width: 100%
+  &:hover
+    background-color: #0f3f8c
+
+@media (max-width: 768px)
+  header button
+    justify-content: center
+
+.clockcolor
+  fill: #f4f5f7
+
+main
+  width: 70vw
+  height: 80vmin
+  margin: 0 7% 2rem
+  position: relative
+  overflow: hidden
+  @media(max-width: 846px)
+    margin: 0 15vw 2rem
+  div[class^="slide"]
+    width: 70vw
+    height: 80vmin
+    background-size: cover
+    background-repeat: no-repeat
+    @media(max-width: 768px)
+        background-position-x: 50%
+  .pic-slider
+    display: flex
+    width: 280vw
+    height: 80vmin
+    position: absolute
+    left: 0
+    animation: move 30s ease-in-out infinite
+    @media(max-width: 768px)
+        animation: none
+  .slide1, .slide2, .slide3
+    width: 100%
+    flex-shrink: 1
+    padding-top: 5vmax
+  .slide1
+    background-image: url("http://i.huffpost.com/gen/997993/thumbs/o-DOCTOR-WHITE-COAT-facebook.jpg")
+  .slide2
+    background-image: url("http://www.ebony.com/wp-content/uploads/2016/07/health_new_black_1280x800_original_322.jpg")
+    p
+      margin-top: 4rem
+      
+  .slide3
+    background-image: url("http://defendernetwork.com/wp-content/uploads/2017/07/Plano-de-Saude-Ambulatorial.jpg")
+    h1
+      color: #6494e0
+  h1
+    font-size: 5rem
+    letter-spacing: 1px
+    margin-bottom: 1em
+    color: #0f3f8c
+    @media(max-width: 846px)
+        font-size: 5vmin
+    span
+      font-weight: 400
+  p
+    font-size: 2.5vw
+    line-height: 3rem
+    background-color: rgba(255, 255, 255, 0.2)
+    padding: 1rem
+    letter-spacing: -0.1rem
+    @media(max-width: 768px)
+        line-height: normal
+        font-size: 5vw
+        background-color: rgba(255, 255, 255, 0.7)
+@keyframes move
+  0%,15%
+    transform: translateX(0)
+
+  25%,50%
+    transform: translateX(-70vw)
+
+  60%,80%
+    transform: translateX(-140vw)
+
+  90%,100%
+    transform: translateX(-210vw)
+
+
+.next::after, .prev::after
+  content: ">"
+  position: absolute
+  top: 75%
+  right: 1050px
+  font-size: 80px
+  font-weight: 100
+  width: 1em
+  height: 3em
+  font-family: "Hind Siliguri", sans-serif
+  transform: translateY(-50%)
+  line-height: 3em
+  box-sizing: border-box
+  padding: 0 0.2em
+  cursor: pointer
+  opacity: 0.5
+  transition: opacity 0.1s linear
+
+.next:hover::after
+  opacity: 1
+
+.prev
+  &:hover::after
+    opacity: 1
+  &::after
+    content: "<"
+    left: 75px
+
+main
+  h1
+    max-width: 45%
+    margin-left: 3%
     text-align: left
-
-main p span 
-    text-transform: uppercase 
-    font-weight: bold
-    font-size: 3rem
-    line-height: 3rem  
-
-//SPECIAL
-
+  p
+    max-width: 45%
+    margin-left: 3%
+    text-align: left
+    span
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 3rem
+      line-height: 3rem
 
 .special
-    max-width: 80%
-    color: $offwhite
+  width: 63vw
+  color: #f4f5f7
+  display: flex
+  position: absolute
+  top: 725px
+  left: 150px
+  flex-wrap: wrap
+  div
+    min-width: 200px
+    &:nth-child(1)
+      background-color: #0f3f8c
+      flex: 1
+    &:nth-child(2)
+      background-color: #3665af
+      flex: 1
+    &:nth-child(3)
+      background-color: #6494e0
+      flex: 1
+    padding: 2rem 1.2rem
+    line-height: 1.5rem
+  h3
+    font-size: 2rem
+    font-family: "Hind", sans-serif
+    font-weight: 300
+    margin-bottom: 0.75rem
+  button
+    padding: 10px 15px
+    color: #f4f5f7
+    font-size: 12px
+    font-weight: 600
+    letter-spacing: 1px
+    font-family: Arial, Helvetica, sans-serif
+    cursor: pointer
+    background-color: transparent
+    border: 2px solid #f4f5f7
+    margin-top: 2rem
+    padding: 15px 25px
     display: flex
-    position: absolute
-    top: 725px 
-    left: 150px 
-    +flex 
+    align-items: center
 
-  
-    // bottom: 2px
-    // left: 140px
-    // position: absolute 
+@media (max-width: 1024px)
+  .special
+    display: none
 
-    div
-        min-width: 200px
+h2, hr
+  margin-left: 5%
 
+h2
+  margin-top: 14rem
+  color: #4d4d4d
+  font-family: "Hind", sans-serif
+  font-size: 2rem
+  letter-spacing: 3px
+  &:last-of-type
+    margin-top: 6rem
 
-    div:nth-child(1)
-        background-color: $blue3
-        flex: 1
-    
-    div:nth-child(2)
-        background-color: $blue2
-        flex: 1
-    div:nth-child(3)
-        background-color: $blue1 
-        flex: 1
-    div
-        padding: 2rem 1.2rem
-        line-height: 1.5rem  
+@media (max-width: 1024px)
+  h2
+    margin-top: 10vmin
 
-    h3 
-        font-size: 2rem 
-        font-family: 'Hind', sans-serif
-        font-weight: 300
-        margin-bottom: .75rem  
+hr
+  width: 25%
+  color: #8c8c8c
+  margin-top: -0.5rem
 
-    button
-        +button
-        background-color: transparent
-        border: 2px solid $offwhite 
-        margin-top: 2rem
-        padding: 15px 25px 
-        display: flex
-        align-items: center
-
-
-// SERVICES
-
-h2, hr 
-    margin-left: 5%   
-
-h2  
-    margin-top: 14rem   
-    color: darken(#ccc,50%)    
-    font-family: 'Hind', sans-serif 
-    font-size: 2rem  
-    letter-spacing: 3px  
-
-h2:last-of-type    
-     margin-top: 6rem            
-
-hr 
-    width: 25%  
-    color: darken(#ccc,25%)  
-    margin-top: -.5rem
-
-    
 .services
-    display: grid 
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr ))            
-    grid-auto-rows: 115px     
-    grid-gap: 2rem  
-    width: 90%   
-    margin: 3rem auto 6rem       
-    font-family: 'Hind', sans-serif   
-  
-    p 
-        line-height: 1.2rem      
-        font-size: 1rem
-        color: lighten(#000,20%)   
-       
- 
-    h3  
-        color: $blue2
-        font-size: 1.5rem
-        letter-spacing: 1px  
-
-    svg
-        fill: lighten(grey,20%)
-        width: 36px     
-        height: 36px     
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+  grid-auto-rows: 115px
+  grid-gap: 2rem
+  width: 90%
+  margin: 3rem auto 6rem
+  font-family: "Hind", sans-serif
+  p
+    line-height: 1.2rem
+    font-size: 1rem
+    color: #333333
+    padding-right: 1rem
+  h3
+    color: #3665af
+    font-size: 1.5rem
+    letter-spacing: 1px
+  svg
+    fill: #b3b3b3
+    width: 36px
+    height: 36px
 
 .service-heading
-    display: flex  
-    margin-bottom: .5rem
-    align-items: baseline      
-
-// ABOUT
+  display: flex
+  margin-bottom: 0.5rem
+  align-items: baseline
 
 .about
-    width: 80%
-    margin: 0 auto   
-    font-family: $font
+  width: 80%
+  margin: 0 auto
+  font-family: "Hind Siliguri", sans-serif
+  display: flex
+  flex-wrap: wrap
+  h4
+    font-size: 1.5rem
+    font-weight: 300
+    margin-bottom: 1rem
+  button
+    padding: 10px 15px
+    color: #f4f5f7
+    font-size: 12px
+    font-weight: 600
+    letter-spacing: 1px
+    font-family: Arial, Helvetica, sans-serif
+    cursor: pointer
+    background-color: transparent
+    border: 2px solid #f4f5f7
+    margin-top: 2rem
+    padding: 15px 25px
     display: flex
-    +flex 
-    
+    align-items: center
+  div
+    &:first-child
+      background-color: #3665af
+      padding: 5vmax
+      color: #f4f5f7
+      min-width: 363px
+    &:last-child
+      background-image: url("https://cdn-img.essence.com/sites/default/files/styles/1x1_lg/public/1508963400/GettyImages-638647058.jpg?itok=W2_NwoIm")
+      background-size: cover
+      background-position: 0 -30px
+      background-repeat: no-repeat
+      width: 50%
+      min-width: 363px
+  .lead
+    font-size: 1.5rem
+    letter-spacing: 1px
+    line-height: 1.5rem
+    margin-bottom: 1rem
 
-    h4 
-        font-size: 1.5rem
-        font-weight: 300 
-        margin-bottom: 1rem
-
-    button
-        +button
-        background-color: transparent
-        border: 2px solid $offwhite 
-        margin-top: 2rem
-        padding: 15px 25px 
-        display: flex 
-        align-items: center
-
-    div:first-child
-        background-color: $blue2
-        padding: 5rem        
-        color: $offwhite
-        width: 50%   
-        min-width: 363px
-        
-    div:last-child
-        background-image: url('https://cdn-img.essence.com/sites/default/files/styles/1x1_lg/public/1508963400/GettyImages-638647058.jpg?itok=W2_NwoIm')
-        background-size: cover         
-        background-position: 0 -30px 
-        background-repeat: no-repeat 
-        width: 50%
-        min-width: 363px
-
-    .lead
-        font-size: 1.5rem
-        letter-spacing: 1px 
-        line-height: 1.5rem
-        margin-bottom: 1rem    
-
-
-// TEAM MEMBERS
+@media (max-width: 414px)
+  .about
+    width: 100%
 
 .team
-    display: flex 
-    width: 85%   
-    margin: 2rem auto 4rem   
-    justify-content: space-between 
-    +flex     
- 
-    img   
-        width: 70% 
-        transition: all .3s ease-in-out   
- 
-    img:hover  
-        transform: scale(1.1)               
-            
-.team-member
-    text-align: center
-    width: 23%   
-    min-width: 165px 
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+  img
+    width: 70%
+    transition: all 0.3s ease-in-out
+    &:hover
+      transform: scale(1.1)
 
-    img 
-        border-radius: 50% 
-          
+.team-member
+  text-align: center
+  padding: 0 0.5rem
+  img
+    border-radius: 50%
+
 .member-name
-    color: $blue1
-    font-size: 1.5rem
-    letter-spacing: 1px 
+  color: #6494e0
+  font-size: 1.5rem
+  letter-spacing: 1px
 
 .member-bio
-     color: lighten(#000,40%)
-     font-family: $font
-     font-size: .9rem 
-     line-height: 1.5rem 
-     font-weight: 600       
-          
+  color: #666666
+  font-family: "Hind Siliguri", sans-serif
+  font-size: 1rem
+  line-height: 1.5rem
+  font-weight: normal
 
-//FOOTER
-
-footer 
-    background-color: #591515           
-    padding: 0 5% 5% 
+footer
+  background-color: #591515
+  padding: 0 5% 5%
 
 .contact-repeat
-    display: flex 
-    +flex 
-    
+  display: flex
+  flex-wrap: wrap
+  .info1, .info2, .info3
+    padding: 2rem
+    flex: 1
+    color: #f4f5f7
+    font-family: "Hind Siliguri", sans-serif
+    letter-spacing: 1px
+    display: grid
+    grid-template-columns: 25% max-content
+  .info1
+    background-color: #0f3f8c
+  .info2
+    background-color: #3665af
+  .info3
+    background-color: #6494e0
+  .lead
+    font-size: 1.5rem
+    margin-bottom: 1rem
+    align-self: center
+  svg
+    fill: #f4f5f7
+    width: 4rem
+    grid-row: 1/span 2
+  p:last-of-type
+    font-size: 0.9rem
+    align-self: start
 
+@media (max-width: 740px)
+  .contact-repeat
     .info1, .info2, .info3
-        padding: 2rem    
-        flex: 1   
-        color: $offwhite  
-        font-family: $font    
-        letter-spacing: 1px 
-        display: grid 
-        grid-template-columns: 25% max-content 
-
-    
-    .info1 
-        background-color: $blue3
-
-    .info2
-        background-color: $blue2
- 
-    .info3
-        background-color: $blue1     
-
-    .lead
-        font-size: 1.5rem  
-        margin-bottom: 1rem 
-        align-self: center   
-                   
-    svg
-        fill: $offwhite 
-        width: 4rem       
-        grid-row: 1 / span 2 
-  
-    p:last-of-type
-        font-size: .9rem 
-        align-self: start 
-          
-//RECAP
+      grid-template-columns: 1fr
+      padding: 0.5rem 1rem
 
 .recap
-    display: flex 
-    +flex   
-    
+  display: flex
+  flex-wrap: wrap
+
 .subscribe
-    margin: 2rem 0
-    display: flex    
-
-    input, button
-        padding: 1rem 
-
-    input
-        flex: 1 
-        margin-right: 5px 
-        border: 1px solid #d87b7b   
-        background: transparent 
-
-    input[placeholder] 
-        color:   lighten(#d87b7b, 20%)  
-
-    button 
-        background-color: darken($blue3, 5%)   
-        border: 0  
-        color: lighten($blue1,10%)   
-        font-weight: bold
-        letter-spacing: 1px  
-        font-family: $font 
-        cursor: pointer
+  margin: 2rem 0
+  display: flex
+  input, button
+    padding: 1rem
+  input
+    flex: 1
+    margin-right: 5px
+    border: 1px solid #d87b7b
+    background: transparent
+    &[placeholder]
+      color: #efcaca
+  button
+    background-color: #0d3575
+    border: 0
+    color: #8fb1e9
+    font-weight: bold
+    letter-spacing: 1px
+    font-family: "Hind Siliguri", sans-serif
+    cursor: pointer
 
 .recap-about, .recap-services, .recap-discounts
-    flex: 1 
-    min-width: 250px        
-
+  flex: 1
+  min-width: 250px
 
 .recap-about
-    padding-right: 4rem
-    line-height: 1.5rem  
-    letter-spacing: 1px    
+  padding-right: 4rem
+  line-height: 1.5rem
+  letter-spacing: 1px
 
 .grey
-    color: #d87b7b     
+  color: #d87b7b
 
 .heading
-    color: white 
-    text-transform: uppercase
-    margin: 3rem 0       
+  color: white
+  text-transform: uppercase
+  margin: 3rem 0
 
-.recap-services li 
-    color: lighten($blue1, 10%)  
-    font-size: 1rem
-    line-height: 2rem           
-    letter-spacing: 1px 
+.recap-services li
+  color: #8fb1e9
+  font-size: 1rem
+  line-height: 2rem
+  letter-spacing: 1px
+
+/*# sourceMappingURL=main.css.map
 
 
 
