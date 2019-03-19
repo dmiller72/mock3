@@ -48,3 +48,5 @@ let carousels = document.getElementsByClassName('pic-slider'); +
     }); +
     +switchImg(); +
 });
+
+

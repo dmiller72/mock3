@@ -13,6 +13,8 @@
 body
   background-color: grey
   background: url("../img/footer_lodyas.png")
+  @media(max-width: 414px)
+    overflow-x: hidden
 
 a
   text-decoration: none
@@ -84,6 +86,8 @@ header
     align-items: center
     svg 
         justify-self: end
+    svg:nth-of-type(2)
+      cursor: pointer
 
 @media (max-width: 414px)  
   display: grid
@@ -104,7 +108,8 @@ nav
     transform: translateX(100%)
     width: 100%
     z-index: 5
-    top: 7vw
+    top: 9vw
+    transition: 250ms
   ul
     display: flex
     li
@@ -127,6 +132,14 @@ nav
 .active, nav a:hover
   background-color: #6494e0
   color: white
+
+@media(min-width: 400px)
+  header .logo svg:nth-of-type(2)
+    display: none
+
+
+.show 
+  transform: translateX(0)
 
 header button
   padding: 10px 15px
@@ -162,13 +175,18 @@ main
   overflow: hidden
   @media(max-width: 846px)
     margin: 0 15vw 2rem
+  @media(max-width: 414px)
+    width: 100vw
+    margin: 0
   div[class^="slide"]
     width: 70vw
     height: 80vmin
     background-size: cover
     background-repeat: no-repeat
     @media(max-width: 768px)
-        background-position-x: 50%
+      background-position-x: 50%
+    @media(max-width: 414px)
+      width: 100vw
   .pic-slider
     display: flex
     width: 280vw
@@ -177,7 +195,9 @@ main
     left: 0
     animation: move 30s ease-in-out infinite
     @media(max-width: 768px)
-        animation: none
+      animation: none
+    @media(max-width: 414px)
+      display: block
   .slide1, .slide2, .slide3
     width: 100%
     flex-shrink: 1
@@ -212,6 +232,8 @@ main
         line-height: normal
         font-size: 5vw
         background-color: rgba(255, 255, 255, 0.7)
+    @media(max-width: 414px)
+      letter-spacing: normal
 @keyframes move
   0%,15%
     transform: translateX(0)
@@ -439,6 +461,8 @@ hr
 footer
   background-color: #591515
   padding: 0 5% 5%
+  @media(max-width: 414px)
+    padding: 0
 
 .contact-repeat
   display: flex
@@ -478,7 +502,8 @@ footer
 .recap
   display: flex
   flex-wrap: wrap
-
+  @media(max-width: 414px)
+    padding: 5%
 .subscribe
   margin: 2rem 0
   display: flex
